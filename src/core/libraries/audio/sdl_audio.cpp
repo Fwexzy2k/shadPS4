@@ -94,7 +94,7 @@ private:
             sdl_buffer_frames = 0;
         }
         const auto sdl_buffer_size = sdl_buffer_frames * frame_size;
-        const auto new_threshold = std::max(guest_buffer_size, sdl_buffer_size) * 4;
+        const auto new_threshold = std::max(guest_buffer_size, sdl_buffer_size) * 8;
         if (host_buffer_size != sdl_buffer_size || queue_threshold != new_threshold) {
             host_buffer_size = sdl_buffer_size;
             queue_threshold = new_threshold;
